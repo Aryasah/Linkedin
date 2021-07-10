@@ -1,0 +1,32 @@
+.inputOption{
+    display: flex;
+    align-items: center;
+    margin-top:15px;
+    color:gray;
+    padding: 10px;
+    cursor: pointer;
+}
+.inputOption:hover{
+    background-color:whitesmoke;
+    border-radius: 10px;
+}
+.inputOption h4{
+    margin-left: 5px;
+}
+@media screen and (max-width: 600px) {
+    .inputOption{
+        padding:5px;
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    .inputOption h4{
+        margin-left: 3px;
+    }
+    .inputOption:hover{
+        background-color:whitesmoke;
+        border-radius: 5px;
+    }
+    .check{
+        display:none !important;
+    }
+  }
