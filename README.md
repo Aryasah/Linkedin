@@ -1,45 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Linkedin Clone
+$ It is basic social media site.
+#### Hosted at [https://linkedin-yt-85935.web.app/](https://linkedin-yt-85935.web.app/)
+#### Git-Repo [https://github.com/Aryasah/Linkedin/](https://github.com/Aryasah/Linkedin/)
 
-## Available Scripts
+*Key Feature*
+* Login with email.id
+* Real Time Posts 
+* Post can also include Photos and Videos
+* Clean Ui
+* Supported with auxilliary chat page [https://linkedinchat.netlify.app/chats](https://linkedinchat.netlify.app/chats)
 
-In the project directory, you can run:
+*Technologies used*
+* React Js
+* Material Ui
+* Redux
+* Firebase Authentication
+* Firestore database
+* Axios
+* Firebase Hosting 
+* [woah.css](http://www.joerezendes.com/projects/Woah.css/)
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### To run:
+* First Fork the Repo
+* then clone in any ide of your choice
+* then install dependencies by run `npm install`
+* now you are all set and start the server `npm start` 
+* You'll be able to see the App at [http://localhost:3000](http://localhost:3000) in the browser
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Preview
 
-### `npm test`
+![link_log](https://user-images.githubusercontent.com/75942764/125863695-985b5543-8f76-40ae-8956-0062e38bd430.jpg)<br/><br/><br/>
+![feed](https://user-images.githubusercontent.com/75942764/125863538-66adaa76-0e64-47b3-b838-2132355fb406.jpg)<br/><br/><br/>
+![photo_attach](https://user-images.githubusercontent.com/75942764/125863526-5f741fa7-d475-4f27-b901-b8bb48714d07.jpg)<br/><br/><br/>
+![Screenshot 2021-07-16 034337](https://user-images.githubusercontent.com/75942764/125864205-307c892d-5e83-43c5-8342-a121f7e7978e.jpg)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-"# Linkedin" 
+### Connect with me
+  
+  * [https://www.facebook.com/arya.sah.98892](https://www.facebook.com/arya.sah.98892)
+  * [https://www.instagram.com/aryasah30/](https://www.instagram.com/aryasah30/)
+  * [https://github.com/Aryasah/](https://github.com/Aryasah/)
+  * [https://www.linkedin.com/in/arya-sah-5100121b3/](https://www.linkedin.com/in/arya-sah-5100121b3/)
