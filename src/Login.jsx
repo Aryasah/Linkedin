@@ -81,7 +81,7 @@ const Login = () => {
                 <button onClick={handleOpen} className="sign_btn">Sign In</button>
                 <div className="account"> Don't have a account yet?<br/> <span onClick={handleOpen}> Register here </span> </div>
             </div>
-            <p className="login_description">It is a learning project made by <a href="linkedin.com/in/arya-sah-5100121b3/" >@AryaSah</a></p>
+            <p className="login_description">It is a learning project made by <a href="https://linkedin.com/in/arya-sah-5100121b3/" >@AryaSah</a></p>
         </div>
         <div className="login_right">
             <img src={im} alt="linkedin_image" />
