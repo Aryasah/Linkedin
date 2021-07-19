@@ -3,7 +3,6 @@ import CreateIcon from '@material-ui/icons/Create'
 import ImageIcon from '@material-ui/icons/Image'
 import SubscriptionIcon from '@material-ui/icons/Subscriptions'
 import EventNoteIcon from '@material-ui/icons/EventNote'
-import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay'
 import InputOption from './InputOption'
 import Post from './Post'
 import { db } from './firebase' 
@@ -12,10 +11,11 @@ import firebase from 'firebase'
 import {useSelector} from 'react-redux'
 import {selectUser} from './features/userSlice'
 import Divider from '@material-ui/core/Divider';
-
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import MicIcon from '@material-ui/icons/Mic';
+
 
 // import { SettingsInputSvideoTwoTone } from '@material-ui/icons'
 
@@ -30,9 +30,8 @@ const Feed = () => {
     const [open, setOpen] = React.useState(false);
     const [opens, setOpens] = React.useState(false);
     
-
-
-
+    
+    
 
     useEffect(()=>{
         // Accesing firebase
@@ -48,12 +47,26 @@ const Feed = () => {
             )
         );
     },[]);
+
+    const SpeechRecognition = window.speechRecognition || window.webkitSpeechRecognition 
+    const recognition = new SpeechRecognition();
+
+    recognition.onstart = function() {
+        readOutLoud('speak now!');
+    };
+
+    recognition.onresult= function(event) {
+        const current = event.resultIndex;
+        const transcript= event.results[current][0].transcript;
+        console.log(transcript)
+        setInput(transcript)
+    }
     
-    const readOutLoud=()=>{
+    const readOutLoud=(message)=>{
         const speech =new SpeechSynthesisUtterance();
-        speech.text="Hello I am Zira How Can i help u ";
-        speech.volume=1;
-        speech.rate=1;
+        speech.text=message;
+        speech.volume=.5;
+        speech.rate=.9;
         speech.pitch =1;
     
         window.speechSynthesis.speak(speech);
@@ -76,6 +89,8 @@ const Feed = () => {
         setVideo("");
         setPhoto("")
         
+
+        
     }
     const handleOpen = () => {
         setOpen(true);
@@ -91,11 +106,14 @@ const Feed = () => {
       const handlesClose = () => {
         setOpens(false);
       };
+      const startRecognize = () => {
+          recognition.start();
+      }
     return (
         <div className="feed">
             <div className="feed_inputContainer">
                 <div className="feed_input">
-                    <CreateIcon onClick={readOutLoud} />
+                    <CreateIcon />
                     <form>
                         <input onChange={e=> setInput(e.target.value)} value={input} type="text" />
                         <button onClick={sendPost} type="submit">Post</button>
@@ -104,8 +122,8 @@ const Feed = () => {
                 <div className="feed_inputOptions">
                     <InputOption check={!photo?false:true} title="Photo" handleOpen={handlesOpen}  Icon={ImageIcon} color="#7085bc"/>
                     <InputOption check={!video?false:true} title="Video" handleOpen={handleOpen} Icon={SubscriptionIcon} color="#ca1010dc"/>
-                    <InputOption title="Event"  Icon={EventNoteIcon} color="#0463cfdc"/>
-                    <InputOption title="WriteArticle"  Icon={CalendarViewDayIcon} color="#eb8908dc"/>
+                    <InputOption  title="Event"  Icon={EventNoteIcon} color="#0463cfdc"/>
+                    <InputOption handleOpen={startRecognize} title="Speak"  Icon={MicIcon} color="#eb8908dc"/>
 
                 </div>
                 <Divider />  

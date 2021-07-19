@@ -10,6 +10,9 @@ import * as serviceWorker from './serviceWorker';
 const hideLoader = () => loader.classList.add('loader--hide');
 
 const loader = document.querySelector('.loader');
+
+
+
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <Provider store={store}>

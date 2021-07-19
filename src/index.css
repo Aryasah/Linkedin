@@ -27,7 +27,7 @@ code {
   border-radius: 50%;
   animation: load8 1.1s infinite linear; */
   transition: linear 0s;
-  background: url(./loader/Eclipse-1s-200px.svg);
+  background: url(./loader/loader.gif);
   background-position: fixed;
   background-size: contain;
 }

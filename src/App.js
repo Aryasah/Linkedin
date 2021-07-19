@@ -47,8 +47,6 @@ function App({hideLoader}) {
 
   return (
     <div className="app">
-     
-
       {/* Header */}
       <Header />
       {!user ? (<Login/>):(
