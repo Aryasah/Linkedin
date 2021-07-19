@@ -4,10 +4,10 @@ import Checkbox from '@material-ui/core/Checkbox';
 import CheckIcon from '@material-ui/icons/Check';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank'
 
-const InputOption = ({title,Icon,color,handleOpen,check}) => {
+const InputOption = ({title,Icon,color,handleOpen,check,countLike,like}) => {
     return (
         <div className="inputOption">
-            {!handleOpen?<Icon style={{color:color}}/>:<Icon onClick={handleOpen} style={{color:color}}/>}
+            {!handleOpen?<Icon onClick={countLike} style={{color:color}}/>:<Icon onClick={handleOpen} style={{color:color}}/>}
             <h4>{title}
             {check?<Checkbox
                 className="check"
@@ -18,6 +18,8 @@ const InputOption = ({title,Icon,color,handleOpen,check}) => {
                 
                 inputProps={{ 'aria-label': 'primary checkbox' }}
             />:""}
+            &nbsp;
+            {like? like:""}
         </h4>
         </div>
     )

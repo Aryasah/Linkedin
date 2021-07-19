@@ -53,4 +53,7 @@
     .header_right{
         margin-right:5px;
     }
+    .header{
+        flex:1;
+    }
   }

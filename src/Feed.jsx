@@ -29,6 +29,7 @@ const Feed = () => {
     const [photo,setPhoto]=useState('')
     const [open, setOpen] = React.useState(false);
     const [opens, setOpens] = React.useState(false);
+    
 
 
 
@@ -47,7 +48,16 @@ const Feed = () => {
             )
         );
     },[]);
-
+    
+    const readOutLoud=()=>{
+        const speech =new SpeechSynthesisUtterance();
+        speech.text="Hello I am Zira How Can i help u ";
+        speech.volume=1;
+        speech.rate=1;
+        speech.pitch =1;
+    
+        window.speechSynthesis.speak(speech);
+    }
 
     const sendPost =(e)=>{
         e.preventDefault();
@@ -58,12 +68,14 @@ const Feed = () => {
         message:input,
         video:video,
         photo:photo,
+        like:0,
         photoUrl:user.photoUrl|| user.email[0],
         timestamp:firebase.firestore.FieldValue.serverTimestamp(),
         });
         setInput("");
         setVideo("");
         setPhoto("")
+        
     }
     const handleOpen = () => {
         setOpen(true);
@@ -83,7 +95,7 @@ const Feed = () => {
         <div className="feed">
             <div className="feed_inputContainer">
                 <div className="feed_input">
-                    <CreateIcon />
+                    <CreateIcon onClick={readOutLoud} />
                     <form>
                         <input onChange={e=> setInput(e.target.value)} value={input} type="text" />
                         <button onClick={sendPost} type="submit">Post</button>
@@ -149,8 +161,8 @@ const Feed = () => {
 
                 {/* List of Posts  */}
                 {/* retrieving from firebase */}
-                {posts.map(({id, data:{name,description,message,photoUrl,video,photo}})=>{
-                    return <Post key={id} name={name} description={description} message={message} photoUrl={photoUrl} video={video} photo={photo}/>
+                {posts.map(({id, data:{name,description,message,photoUrl,video,photo,like}})=>{
+                    return <Post key={id} id={id} name={name} description={description} message={message} photoUrl={photoUrl} video={video} photo={photo} like={like}/>
 
                 })}
                 {/* <Post key={id} name={name} description={description} message={message} photoUrl={photoUrl}/> */}

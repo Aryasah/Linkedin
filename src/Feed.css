@@ -97,5 +97,6 @@
 @media screen and (max-width: 600px) {
     .feed{
         flex:1;
+        margin-left: 0px;
     }
   }
