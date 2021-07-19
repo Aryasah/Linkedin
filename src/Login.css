@@ -47,7 +47,15 @@
 
 }
 .login_register{
-    color: #0074b1;
+    height:35px;
+    padding:0px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:white;
+    background-color:#0074b1;
+    flex:1;
+    margin:5px;
     cursor: pointer;
 }
 .login p{

@@ -111,7 +111,7 @@ const Login = () => {
                                     {/* <button onClick={register}>Register</button> */}
                                 </div>
                             </form>
-                            <p>Not a member? <span className="login_register" onClick={register}>Register</span></p>
+                            <p >Not a member?<br/> <span className="login_register" onClick={register}>Register</span></p>
 
                         </div>
                 </Fade>

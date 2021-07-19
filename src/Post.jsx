@@ -36,7 +36,7 @@ function Post({name,description,message,photoUrl,video,photo,like,id}) {
                 <div className="post_info">
                     <h2>{name}</h2>
                     <p>
-                        {description} &nbsp; {like}
+                        {description}
                     </p>
 
                 </div>
